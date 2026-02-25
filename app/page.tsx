@@ -203,6 +203,68 @@ export default function Page() {
           </div>
         </section>
 
+        {/* Section 5: Testimonials */}
+        <section className="bg-[#f2f2f0] border-t border-[#1c1c1c]/20 p-8 md:p-16 lg:p-24 flex flex-col relative min-h-screen overflow-hidden">
+          <div className="flex justify-between items-center text-[10px] md:text-sm font-medium tracking-widest uppercase mb-16 text-[#1c1c1c]/60">
+            <span>Testimonials</span>
+            <span className="hidden md:block">Page (N°005)</span>
+          </div>
+
+          <div className="flex flex-col mb-16 md:mb-24">
+            <h2 className="text-5xl md:text-7xl lg:text-[6rem] font-space font-medium leading-[0.85] tracking-[-0.03em] text-[#1c1c1c]">
+              Trusted by <br />
+              <span className="text-[#f13b22]">Industry Leaders.</span>
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 lg:gap-16 flex-1">
+            {/* Testimonial 1 */}
+            <div className="flex flex-col justify-between border-t border-[#1c1c1c]/10 pt-8">
+              <div className="mb-8">
+                <span className="text-6xl text-[#f13b22] font-chakra leading-none">"</span>
+                <p className="text-sm md:text-base font-medium leading-[1.6] text-[#1c1c1c]/80 mt-4">
+                  The automation infrastructure provided by this platform has completely transformed our operational efficiency. We've seen a 40% reduction in manual tasks within the first quarter.
+                </p>
+              </div>
+              <div>
+                <div className="w-6 h-[1px] bg-[#1c1c1c]/30 mb-4"></div>
+                <h4 className="text-lg font-bold text-[#1c1c1c] font-space">Sarah Jenkins</h4>
+                <span className="text-[10px] font-medium uppercase tracking-widest text-[#f13b22]">CTO, TechFlow Inc.</span>
+              </div>
+            </div>
+
+            {/* Testimonial 2 */}
+            <div className="flex flex-col justify-between border-t border-[#1c1c1c]/10 pt-8">
+              <div className="mb-8">
+                <span className="text-6xl text-[#f13b22] font-chakra leading-none">"</span>
+                <p className="text-sm md:text-base font-medium leading-[1.6] text-[#1c1c1c]/80 mt-4">
+                  Secure, scalable, and incredibly intuitive. It's rare to find an enterprise-ready solution that deploys this quickly without compromising on compliance or performance.
+                </p>
+              </div>
+              <div>
+                <div className="w-6 h-[1px] bg-[#1c1c1c]/30 mb-4"></div>
+                <h4 className="text-lg font-bold text-[#1c1c1c] font-space">Marcus Chen</h4>
+                <span className="text-[10px] font-medium uppercase tracking-widest text-[#f13b22]">VP of Engineering, Nexus</span>
+              </div>
+            </div>
+
+            {/* Testimonial 3 */}
+            <div className="flex flex-col justify-between border-t border-[#1c1c1c]/10 pt-8">
+              <div className="mb-8">
+                <span className="text-6xl text-[#f13b22] font-chakra leading-none">"</span>
+                <p className="text-sm md:text-base font-medium leading-[1.6] text-[#1c1c1c]/80 mt-4">
+                  Their AI-powered workflows allowed us to scale our customer success operations globally without proportionally increasing our headcount. A true game-changer.
+                </p>
+              </div>
+              <div>
+                <div className="w-6 h-[1px] bg-[#1c1c1c]/30 mb-4"></div>
+                <h4 className="text-lg font-bold text-[#1c1c1c] font-space">Elena Rodriguez</h4>
+                <span className="text-[10px] font-medium uppercase tracking-widest text-[#f13b22]">Director of Ops, GlobalScale</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Footer */}
         <footer className="bg-[#1c1c1c] text-[#f2f2f0] p-8 md:p-16 lg:p-24 flex flex-col md:flex-row justify-between items-start md:items-end gap-12 md:gap-0">
           <div className="flex flex-col gap-8">
