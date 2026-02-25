@@ -51,9 +51,15 @@ export default function Page() {
             
             <div className="md:pl-16 lg:pl-24 flex flex-col justify-end relative">
               <span className="absolute top-0 md:top-[20%] right-0 text-xs md:text-sm font-medium text-[#f13b22]">©2026</span>
-              <p className="text-[10px] md:text-xs font-medium uppercase tracking-widest text-[#1c1c1c]/50 max-w-[320px] leading-[1.8]">
+              <p className="text-[10px] md:text-xs font-medium uppercase tracking-widest text-[#1c1c1c]/50 max-w-[320px] leading-[1.8] mb-8">
                 We build AI-powered workflow infrastructure that helps modern companies automate operations, reduce costs, and scale faster.
               </p>
+              <div className="flex items-center gap-4">
+                <a href="#contact" className="inline-flex items-center gap-2 bg-[#f13b22] text-[#f2f2f0] px-6 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-[#d1331d] transition-colors">
+                  Request a Demo
+                  <ArrowRight className="w-3 h-3" strokeWidth={2} />
+                </a>
+              </div>
               <div className="w-6 h-[1px] bg-[#1c1c1c]/30 mt-8"></div>
             </div>
           </div>
