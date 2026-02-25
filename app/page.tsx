@@ -16,11 +16,11 @@ const Soundwave = () => {
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-[#201f1e] flex flex-col gap-4 md:gap-8 p-4 md:p-8">
-      <div className="max-w-[1800px] w-full mx-auto flex flex-col gap-4 md:gap-8">
+    <main className="min-h-screen flex flex-col w-full">
+      <div className="w-full flex flex-col">
         
         {/* Section 1: Series A Pitch */}
-        <section className="bg-[#f2f2f0] rounded-[2rem] p-8 md:p-16 lg:p-24 flex flex-col relative min-h-[80vh] overflow-hidden">
+        <section className="bg-[#f2f2f0] p-8 md:p-16 lg:p-24 flex flex-col relative min-h-screen overflow-hidden">
           {/* Vertical Divider */}
           <div className="absolute top-0 bottom-0 left-1/2 w-[1px] bg-[#1c1c1c]/10 hidden md:block"></div>
           
@@ -60,7 +60,7 @@ export default function Page() {
         </section>
 
         {/* Section 2: Year Overview */}
-        <section className="bg-[#f2f2f0] rounded-[2rem] flex flex-col relative min-h-[80vh] overflow-hidden">
+        <section className="bg-[#f2f2f0] border-t border-[#1c1c1c]/20 flex flex-col relative min-h-screen overflow-hidden">
           {/* Horizontal Divider */}
           <div className="absolute top-[40%] left-0 right-0 h-[1px] bg-[#1c1c1c]/10"></div>
           {/* Vertical Divider Bottom */}
@@ -117,7 +117,7 @@ export default function Page() {
         </section>
 
         {/* Section 3: Conference */}
-        <section className="bg-[#f2f2f0] rounded-[2rem] p-8 md:p-16 lg:p-24 flex flex-col relative min-h-[80vh] overflow-hidden">
+        <section className="bg-[#f2f2f0] border-t border-[#1c1c1c]/20 p-8 md:p-16 lg:p-24 flex flex-col relative min-h-screen overflow-hidden">
           <div className="flex justify-between items-center text-[10px] md:text-sm font-medium tracking-widest uppercase mb-16 text-[#1c1c1c]/60">
             <span>Conference</span>
             <span className="text-[#1c1c1c]">©2026</span>
@@ -167,7 +167,7 @@ export default function Page() {
         </section>
 
         {/* Section 4: The Solution */}
-        <section className="bg-[#f2f2f0] rounded-[2rem] p-8 md:p-16 lg:p-24 flex flex-col relative min-h-[80vh] overflow-hidden">
+        <section className="bg-[#f2f2f0] border-t border-[#1c1c1c]/20 p-8 md:p-16 lg:p-24 flex flex-col relative min-h-screen overflow-hidden">
           <div className="text-[10px] md:text-sm font-medium tracking-widest uppercase mb-16 text-[#1c1c1c]/60">
             <span>The Solution</span>
           </div>
