@@ -50,27 +50,27 @@ export default function Page() {
           </div>
           
           {/* Top Right Number */}
-          <span className="text-[#f13b22] text-[8rem] md:text-[12rem] lg:text-[16rem] font-bold absolute top-8 right-8 md:right-16 lg:right-24 font-chakra leading-none">01</span>
+          <span className="text-[#f13b22] text-[6rem] sm:text-[8rem] md:text-[12rem] lg:text-[16rem] font-bold absolute top-8 right-8 md:right-16 lg:right-24 font-chakra leading-none">01</span>
 
           {/* Content */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-0 flex-1 relative z-10 mt-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 sm:gap-16 md:gap-0 flex-1 relative z-10 mt-auto">
             <div className="flex flex-col justify-end relative md:pr-16 lg:pr-24">
-              <div className="flex gap-1.5 mb-12">
+              <div className="flex gap-1.5 mb-8 sm:mb-12">
                 <div className="w-2.5 h-2.5 rounded-full bg-[#1c1c1c]/40"></div>
                 <div className="w-2.5 h-2.5 rounded-full border border-[#1c1c1c]/40"></div>
               </div>
-              <h1 className="text-6xl md:text-8xl lg:text-[7rem] xl:text-[9rem] font-space font-medium leading-[0.85] tracking-[-0.03em] text-[#1c1c1c]">
+              <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-[7rem] xl:text-[9rem] font-space font-medium leading-[0.85] tracking-[-0.03em] text-[#1c1c1c]">
                 Scaling the <br />
                 <span className="text-[#f13b22]">Future -</span> <br />
                 of Intelligent <br />
                 Automation.
               </h1>
-              <span className="text-[#f13b22] font-bold text-2xl absolute top-[20%] right-0 md:right-8 lg:right-16">TM</span>
+              <span className="text-[#f13b22] font-bold text-xl sm:text-2xl absolute top-[5%] sm:top-[20%] right-0 md:right-8 lg:right-16">TM</span>
             </div>
             
             <div className="md:pl-16 lg:pl-24 flex flex-col justify-end relative">
-              <span className="absolute top-0 md:top-[20%] right-0 text-xs md:text-sm font-medium text-[#f13b22]">©2026</span>
-              <p className="text-[10px] md:text-xs font-medium uppercase tracking-widest text-[#1c1c1c]/50 max-w-[320px] leading-[1.8] mb-8">
+              <span className="absolute top-0 md:top-[20%] right-0 text-[10px] sm:text-xs md:text-sm font-medium text-[#f13b22]">©2026</span>
+              <p className="text-[10px] md:text-xs font-medium uppercase tracking-widest text-[#1c1c1c]/50 max-w-[320px] leading-[1.8] mb-6 sm:mb-8 mt-8 md:mt-0">
                 We build AI-powered workflow infrastructure that helps modern companies automate operations, reduce costs, and scale faster.
               </p>
               <div className="flex items-center gap-4">
@@ -98,15 +98,15 @@ export default function Page() {
               <span className="w-1/2 pl-8 hidden md:block">Page (N°002)</span>
             </div>
             
-            <div className="flex items-center gap-8 md:gap-16 mt-12">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8 md:gap-16 mt-8 sm:mt-12">
               <Parallax offset={80}>
-                <h2 className="text-7xl md:text-[10rem] lg:text-[14rem] font-bold font-chakra tracking-tighter text-[#1c1c1c] leading-none">2025</h2>
+                <h2 className="text-6xl sm:text-7xl md:text-[10rem] lg:text-[14rem] font-bold font-chakra tracking-tighter text-[#1c1c1c] leading-none">2025</h2>
               </Parallax>
-              <div className="w-12 h-12 md:w-20 md:h-20 rounded-full border border-[#1c1c1c]/10 flex items-center justify-center text-[#f13b22] shrink-0">
-                <ArrowRight className="w-6 h-6 md:w-8 md:h-8" strokeWidth={1.5} />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-20 md:h-20 rounded-full border border-[#1c1c1c]/10 flex items-center justify-center text-[#f13b22] shrink-0">
+                <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8" strokeWidth={1.5} />
               </div>
-              <Parallax offset={-60} className="ml-auto">
-                <h2 className="text-7xl md:text-[10rem] lg:text-[14rem] font-light font-space tracking-tighter text-[#1c1c1c]/30 truncate leading-none">in Nu</h2>
+              <Parallax offset={-60} className="sm:ml-auto">
+                <h2 className="text-6xl sm:text-7xl md:text-[10rem] lg:text-[14rem] font-light font-space tracking-tighter text-[#1c1c1c]/30 truncate leading-none">in Nu</h2>
               </Parallax>
             </div>
           </div>
@@ -118,11 +118,11 @@ export default function Page() {
                 <div className="w-2.5 h-2.5 rounded-full bg-[#1c1c1c]/40"></div>
                 <div className="w-2.5 h-2.5 rounded-full border border-[#1c1c1c]/40"></div>
               </div>
-              <div className="mt-auto">
+              <div className="mt-8 md:mt-auto">
                 <Parallax offset={90}>
-                  <h3 className="text-[6rem] md:text-[10rem] lg:text-[14rem] font-bold text-[#f13b22] font-chakra tracking-tighter leading-none mb-8">12%</h3>
+                  <h3 className="text-[5rem] sm:text-[6rem] md:text-[10rem] lg:text-[14rem] font-bold text-[#f13b22] font-chakra tracking-tighter leading-none mb-4 sm:mb-8">12%</h3>
                 </Parallax>
-                <div className="flex items-center gap-6 mb-8">
+                <div className="flex items-center gap-4 sm:gap-6 mb-4 sm:mb-8">
                   <div className="w-6 h-[1px] bg-[#1c1c1c]/30"></div>
                   <span className="text-xs font-medium uppercase tracking-widest text-[#1c1c1c]">MoM Revenue Growth</span>
                 </div>
@@ -133,11 +133,11 @@ export default function Page() {
             </div>
             
             <div className="p-8 md:p-16 lg:p-24 flex flex-col justify-end">
-              <div>
+              <div className="mt-8 md:mt-0">
                 <Parallax offset={70}>
-                  <h3 className="text-[6rem] md:text-[10rem] lg:text-[14rem] font-bold text-[#f13b22] font-chakra tracking-tighter leading-none mb-8">8.4</h3>
+                  <h3 className="text-[5rem] sm:text-[6rem] md:text-[10rem] lg:text-[14rem] font-bold text-[#f13b22] font-chakra tracking-tighter leading-none mb-4 sm:mb-8">8.4</h3>
                 </Parallax>
-                <div className="flex items-center gap-6 mb-8">
+                <div className="flex items-center gap-4 sm:gap-6 mb-4 sm:mb-8">
                   <div className="w-6 h-[1px] bg-[#1c1c1c]/30"></div>
                   <span className="text-xs font-medium uppercase tracking-widest text-[#1c1c1c]">Annual Recurrin...</span>
                 </div>
@@ -156,10 +156,10 @@ export default function Page() {
             <span className="text-[#1c1c1c]">©2026</span>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-12 flex-1">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 sm:gap-16 md:gap-12 flex-1">
             <div className="flex flex-col justify-between">
               <Parallax offset={60}>
-                <h2 className="text-5xl md:text-7xl lg:text-[6rem] xl:text-[7.5rem] font-space font-medium leading-[0.85] tracking-[-0.03em] text-[#1c1c1c]">
+                <h2 className="text-4xl sm:text-5xl md:text-7xl lg:text-[6rem] xl:text-[7.5rem] font-space font-medium leading-[0.85] tracking-[-0.03em] text-[#1c1c1c]">
                   Join Us in <br />
                   Building <br />
                   <span className="text-[#f13b22]">the Next -</span> <br />
@@ -167,12 +167,12 @@ export default function Page() {
                   Leader.
                 </h2>
               </Parallax>
-              <div className="flex items-end gap-8 mt-16 md:mt-auto">
+              <div className="flex items-end gap-6 sm:gap-8 mt-12 sm:mt-16 md:mt-auto">
                 <Parallax offset={100}>
-                  <h3 className="text-[6rem] md:text-[10rem] lg:text-[14rem] font-bold text-[#f13b22] font-chakra tracking-tighter leading-none">04</h3>
+                  <h3 className="text-[5rem] sm:text-[6rem] md:text-[10rem] lg:text-[14rem] font-bold text-[#f13b22] font-chakra tracking-tighter leading-none">04</h3>
                 </Parallax>
-                <div className="w-12 h-12 md:w-16 md:h-16 rounded-full border border-[#1c1c1c]/20 flex items-center justify-center text-[#f13b22] mb-4 shrink-0">
-                  <ArrowRight className="w-5 h-5 md:w-6 md:h-6" strokeWidth={2} />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-full border border-[#1c1c1c]/20 flex items-center justify-center text-[#f13b22] mb-2 sm:mb-4 shrink-0">
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" strokeWidth={2} />
                 </div>
               </div>
             </div>
@@ -182,24 +182,24 @@ export default function Page() {
                 <Soundwave />
               </div>
               
-              <div className="flex items-center gap-8 w-full max-w-[300px] md:mr-auto mt-16 md:mt-auto">
-                <div className="w-16 h-16 rounded-full bg-[#1c1c1c] flex items-center justify-center text-[#f2f2f0] shrink-0">
-                  <Globe className="w-6 h-6" strokeWidth={1.5} />
+              <div className="flex items-center gap-6 sm:gap-8 w-full max-w-[300px] md:mr-auto mt-12 sm:mt-16 md:mt-auto">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#1c1c1c] flex items-center justify-center text-[#f2f2f0] shrink-0">
+                  <Globe className="w-5 h-5 sm:w-6 sm:h-6" strokeWidth={1.5} />
                 </div>
-                <p className="text-sm md:text-base font-medium leading-[1.3] text-[#1c1c1c]/80">
+                <p className="text-xs sm:text-sm md:text-base font-medium leading-[1.3] text-[#1c1c1c]/80">
                   Silicon Valley, CA<br />
                   Investor Meetings<br />
                   Open
                 </p>
               </div>
 
-              <div className="flex gap-1.5 mt-16 md:mt-auto hidden md:flex">
+              <div className="flex gap-1.5 mt-12 sm:mt-16 md:mt-auto hidden md:flex">
                 <div className="w-2.5 h-2.5 rounded-full border border-[#1c1c1c]/40"></div>
                 <div className="w-2.5 h-2.5 rounded-full bg-[#1c1c1c]/40"></div>
               </div>
               
-              <Parallax offset={80} className="mt-12 md:mt-4">
-                <h3 className="text-[6rem] md:text-[10rem] lg:text-[14rem] font-bold font-chakra tracking-tighter leading-none text-[#1c1c1c]">2026</h3>
+              <Parallax offset={80} className="mt-8 sm:mt-12 md:mt-4">
+                <h3 className="text-[5rem] sm:text-[6rem] md:text-[10rem] lg:text-[14rem] font-bold font-chakra tracking-tighter leading-none text-[#1c1c1c]">2026</h3>
               </Parallax>
             </div>
           </div>
@@ -213,7 +213,7 @@ export default function Page() {
 
           <div className="flex-1 flex flex-col justify-center">
             <Parallax offset={70}>
-              <h2 className="text-5xl md:text-7xl lg:text-[6rem] xl:text-[7.5rem] font-space font-medium leading-[0.85] tracking-[-0.03em] text-[#1c1c1c] max-w-[90%]">
+              <h2 className="text-4xl sm:text-5xl md:text-7xl lg:text-[6rem] xl:text-[7.5rem] font-space font-medium leading-[0.85] tracking-[-0.03em] text-[#1c1c1c] max-w-full md:max-w-[90%]">
                 Unlike traditional tools,<br />
                 <span className="text-[#f13b22]">our solution</span> is built for<br />
                 scale — secure, modern,<br />
@@ -245,9 +245,9 @@ export default function Page() {
             <span className="hidden md:block">Page (N°005)</span>
           </div>
 
-          <div className="flex flex-col mb-16 md:mb-24">
+          <div className="flex flex-col mb-12 sm:mb-16 md:mb-24">
             <Parallax offset={50}>
-              <h2 className="text-5xl md:text-7xl lg:text-[6rem] font-space font-medium leading-[0.85] tracking-[-0.03em] text-[#1c1c1c]">
+              <h2 className="text-4xl sm:text-5xl md:text-7xl lg:text-[6rem] font-space font-medium leading-[0.85] tracking-[-0.03em] text-[#1c1c1c]">
                 Trusted by <br />
                 <span className="text-[#f13b22]">Industry Leaders.</span>
               </h2>
@@ -305,8 +305,8 @@ export default function Page() {
         {/* Footer */}
         <footer className="bg-[#1c1c1c] text-[#f2f2f0] p-8 md:p-16 lg:p-24 flex flex-col md:flex-row justify-between items-start md:items-end gap-12 md:gap-0">
           <div className="flex flex-col gap-8">
-            <h2 className="text-3xl md:text-5xl font-space font-medium tracking-[-0.03em]">Intelligent<br />Automation.</h2>
-            <div className="flex gap-6 text-[10px] md:text-xs font-medium uppercase tracking-widest text-[#f2f2f0]/60">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-space font-medium tracking-[-0.03em]">Intelligent<br />Automation.</h2>
+            <div className="flex flex-wrap gap-4 sm:gap-6 text-[10px] md:text-xs font-medium uppercase tracking-widest text-[#f2f2f0]/60">
               <a href="#" className="hover:text-[#f13b22] transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-[#f13b22] transition-colors">Terms of Service</a>
               <a href="#" className="hover:text-[#f13b22] transition-colors">Contact</a>
