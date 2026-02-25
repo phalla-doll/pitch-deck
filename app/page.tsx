@@ -1,4 +1,23 @@
+"use client";
+
 import { ArrowRight, Globe } from 'lucide-react';
+import { motion, useScroll, useTransform } from 'motion/react';
+import { useRef } from 'react';
+
+const Parallax = ({ children, offset = 50, className }: { children: React.ReactNode, offset?: number, className?: string }) => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"]
+  });
+  const y = useTransform(scrollYProgress, [0, 1], [offset, -offset]);
+
+  return (
+    <motion.div ref={ref} style={{ y }} className={className}>
+      {children}
+    </motion.div>
+  );
+};
 
 const Soundwave = () => {
   const bars = [
@@ -80,11 +99,15 @@ export default function Page() {
             </div>
             
             <div className="flex items-center gap-8 md:gap-16 mt-12">
-              <h2 className="text-7xl md:text-[10rem] lg:text-[14rem] font-bold font-chakra tracking-tighter text-[#1c1c1c] leading-none">2025</h2>
+              <Parallax offset={80}>
+                <h2 className="text-7xl md:text-[10rem] lg:text-[14rem] font-bold font-chakra tracking-tighter text-[#1c1c1c] leading-none">2025</h2>
+              </Parallax>
               <div className="w-12 h-12 md:w-20 md:h-20 rounded-full border border-[#1c1c1c]/10 flex items-center justify-center text-[#f13b22] shrink-0">
                 <ArrowRight className="w-6 h-6 md:w-8 md:h-8" strokeWidth={1.5} />
               </div>
-              <h2 className="text-7xl md:text-[10rem] lg:text-[14rem] font-light font-space tracking-tighter text-[#1c1c1c]/30 ml-auto truncate leading-none">in Nu</h2>
+              <Parallax offset={-60} className="ml-auto">
+                <h2 className="text-7xl md:text-[10rem] lg:text-[14rem] font-light font-space tracking-tighter text-[#1c1c1c]/30 truncate leading-none">in Nu</h2>
+              </Parallax>
             </div>
           </div>
 
@@ -96,7 +119,9 @@ export default function Page() {
                 <div className="w-2.5 h-2.5 rounded-full border border-[#1c1c1c]/40"></div>
               </div>
               <div className="mt-auto">
-                <h3 className="text-[6rem] md:text-[10rem] lg:text-[14rem] font-bold text-[#f13b22] font-chakra tracking-tighter leading-none mb-8">12%</h3>
+                <Parallax offset={90}>
+                  <h3 className="text-[6rem] md:text-[10rem] lg:text-[14rem] font-bold text-[#f13b22] font-chakra tracking-tighter leading-none mb-8">12%</h3>
+                </Parallax>
                 <div className="flex items-center gap-6 mb-8">
                   <div className="w-6 h-[1px] bg-[#1c1c1c]/30"></div>
                   <span className="text-xs font-medium uppercase tracking-widest text-[#1c1c1c]">MoM Revenue Growth</span>
@@ -109,7 +134,9 @@ export default function Page() {
             
             <div className="p-8 md:p-16 lg:p-24 flex flex-col justify-end">
               <div>
-                <h3 className="text-[6rem] md:text-[10rem] lg:text-[14rem] font-bold text-[#f13b22] font-chakra tracking-tighter leading-none mb-8">8.4</h3>
+                <Parallax offset={70}>
+                  <h3 className="text-[6rem] md:text-[10rem] lg:text-[14rem] font-bold text-[#f13b22] font-chakra tracking-tighter leading-none mb-8">8.4</h3>
+                </Parallax>
                 <div className="flex items-center gap-6 mb-8">
                   <div className="w-6 h-[1px] bg-[#1c1c1c]/30"></div>
                   <span className="text-xs font-medium uppercase tracking-widest text-[#1c1c1c]">Annual Recurrin...</span>
@@ -131,15 +158,19 @@ export default function Page() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-12 flex-1">
             <div className="flex flex-col justify-between">
-              <h2 className="text-5xl md:text-7xl lg:text-[6rem] xl:text-[7.5rem] font-space font-medium leading-[0.85] tracking-[-0.03em] text-[#1c1c1c]">
-                Join Us in <br />
-                Building <br />
-                <span className="text-[#f13b22]">the Next -</span> <br />
-                Automation <br />
-                Leader.
-              </h2>
+              <Parallax offset={60}>
+                <h2 className="text-5xl md:text-7xl lg:text-[6rem] xl:text-[7.5rem] font-space font-medium leading-[0.85] tracking-[-0.03em] text-[#1c1c1c]">
+                  Join Us in <br />
+                  Building <br />
+                  <span className="text-[#f13b22]">the Next -</span> <br />
+                  Automation <br />
+                  Leader.
+                </h2>
+              </Parallax>
               <div className="flex items-end gap-8 mt-16 md:mt-auto">
-                <h3 className="text-[6rem] md:text-[10rem] lg:text-[14rem] font-bold text-[#f13b22] font-chakra tracking-tighter leading-none">04</h3>
+                <Parallax offset={100}>
+                  <h3 className="text-[6rem] md:text-[10rem] lg:text-[14rem] font-bold text-[#f13b22] font-chakra tracking-tighter leading-none">04</h3>
+                </Parallax>
                 <div className="w-12 h-12 md:w-16 md:h-16 rounded-full border border-[#1c1c1c]/20 flex items-center justify-center text-[#f13b22] mb-4 shrink-0">
                   <ArrowRight className="w-5 h-5 md:w-6 md:h-6" strokeWidth={2} />
                 </div>
@@ -167,7 +198,9 @@ export default function Page() {
                 <div className="w-2.5 h-2.5 rounded-full bg-[#1c1c1c]/40"></div>
               </div>
               
-              <h3 className="text-[6rem] md:text-[10rem] lg:text-[14rem] font-bold font-chakra tracking-tighter leading-none mt-12 md:mt-4 text-[#1c1c1c]">2026</h3>
+              <Parallax offset={80} className="mt-12 md:mt-4">
+                <h3 className="text-[6rem] md:text-[10rem] lg:text-[14rem] font-bold font-chakra tracking-tighter leading-none text-[#1c1c1c]">2026</h3>
+              </Parallax>
             </div>
           </div>
         </section>
@@ -179,13 +212,15 @@ export default function Page() {
           </div>
 
           <div className="flex-1 flex flex-col justify-center">
-            <h2 className="text-5xl md:text-7xl lg:text-[6rem] xl:text-[7.5rem] font-space font-medium leading-[0.85] tracking-[-0.03em] text-[#1c1c1c] max-w-[90%]">
-              Unlike traditional tools,<br />
-              <span className="text-[#f13b22]">our solution</span> is built for<br />
-              scale — secure, modern,<br />
-              and enterprise-ready<br />
-              from day one.
-            </h2>
+            <Parallax offset={70}>
+              <h2 className="text-5xl md:text-7xl lg:text-[6rem] xl:text-[7.5rem] font-space font-medium leading-[0.85] tracking-[-0.03em] text-[#1c1c1c] max-w-[90%]">
+                Unlike traditional tools,<br />
+                <span className="text-[#f13b22]">our solution</span> is built for<br />
+                scale — secure, modern,<br />
+                and enterprise-ready<br />
+                from day one.
+              </h2>
+            </Parallax>
           </div>
 
           <div className="mt-16 flex flex-col md:flex-row items-start md:items-center justify-between border-t border-[#1c1c1c]/10 pt-12 gap-12 md:gap-0">
@@ -211,10 +246,12 @@ export default function Page() {
           </div>
 
           <div className="flex flex-col mb-16 md:mb-24">
-            <h2 className="text-5xl md:text-7xl lg:text-[6rem] font-space font-medium leading-[0.85] tracking-[-0.03em] text-[#1c1c1c]">
-              Trusted by <br />
-              <span className="text-[#f13b22]">Industry Leaders.</span>
-            </h2>
+            <Parallax offset={50}>
+              <h2 className="text-5xl md:text-7xl lg:text-[6rem] font-space font-medium leading-[0.85] tracking-[-0.03em] text-[#1c1c1c]">
+                Trusted by <br />
+                <span className="text-[#f13b22]">Industry Leaders.</span>
+              </h2>
+            </Parallax>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 lg:gap-16 flex-1">
