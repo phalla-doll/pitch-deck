@@ -19,6 +19,16 @@ const Parallax = ({ children, offset = 50, className }: { children: React.ReactN
   );
 };
 
+const HeroParallax = ({ children, offset = 50, className }: { children: React.ReactNode, offset?: number, className?: string }) => {
+  const { scrollY } = useScroll();
+  const y = useTransform(scrollY, [0, 1000], [0, offset]);
+  return (
+    <motion.div style={{ y }} className={className}>
+      {children}
+    </motion.div>
+  );
+};
+
 const Soundwave = () => {
   const bars = [
     20, 35, 15, 50, 70, 30, 80, 40, 60, 20, 90, 50, 30, 70, 40, 60, 20, 80, 30, 50, 20, 70, 40, 60, 30, 50, 15, 35, 20,
@@ -50,7 +60,9 @@ export default function Page() {
           </div>
           
           {/* Top Right Number */}
-          <span className="text-[#f13b22] text-[6rem] sm:text-[8rem] md:text-[12rem] lg:text-[16rem] font-bold absolute top-8 right-8 md:right-16 lg:right-24 font-chakra leading-none">01</span>
+          <HeroParallax offset={200} className="absolute top-8 right-8 md:right-16 lg:right-24">
+            <span className="text-[#f13b22] text-[6rem] sm:text-[8rem] md:text-[12rem] lg:text-[16rem] font-bold font-chakra leading-none">01</span>
+          </HeroParallax>
 
           {/* Content */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 sm:gap-16 md:gap-0 flex-1 relative z-10 mt-auto">
@@ -59,12 +71,14 @@ export default function Page() {
                 <div className="w-2.5 h-2.5 rounded-full bg-[#1c1c1c]/40"></div>
                 <div className="w-2.5 h-2.5 rounded-full border border-[#1c1c1c]/40"></div>
               </div>
-              <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-[7rem] xl:text-[9rem] font-space font-medium leading-[0.85] tracking-[-0.03em] text-[#1c1c1c]">
-                Scaling the <br />
-                <span className="text-[#f13b22]">Future -</span> <br />
-                of Intelligent <br />
-                Automation.
-              </h1>
+              <HeroParallax offset={100}>
+                <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-[7rem] xl:text-[9rem] font-space font-medium leading-[0.85] tracking-[-0.03em] text-[#1c1c1c]">
+                  Scaling the <br />
+                  <span className="text-[#f13b22]">Future -</span> <br />
+                  of Intelligent <br />
+                  Automation.
+                </h1>
+              </HeroParallax>
               <span className="text-[#f13b22] font-bold text-xl sm:text-2xl absolute top-[5%] sm:top-[20%] right-0 md:right-8 lg:right-16">TM</span>
             </div>
             
@@ -99,13 +113,13 @@ export default function Page() {
             </div>
             
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8 md:gap-16 mt-8 sm:mt-12">
-              <Parallax offset={80}>
+              <Parallax offset={150}>
                 <h2 className="text-6xl sm:text-7xl md:text-[10rem] lg:text-[14rem] font-bold font-chakra tracking-tighter text-[#1c1c1c] leading-none">2025</h2>
               </Parallax>
               <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-20 md:h-20 rounded-full border border-[#1c1c1c]/10 flex items-center justify-center text-[#f13b22] shrink-0">
                 <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8" strokeWidth={1.5} />
               </div>
-              <Parallax offset={-60} className="sm:ml-auto">
+              <Parallax offset={-100} className="sm:ml-auto">
                 <h2 className="text-6xl sm:text-7xl md:text-[10rem] lg:text-[14rem] font-light font-space tracking-tighter text-[#1c1c1c]/30 truncate leading-none">in Nu</h2>
               </Parallax>
             </div>
@@ -119,7 +133,7 @@ export default function Page() {
                 <div className="w-2.5 h-2.5 rounded-full border border-[#1c1c1c]/40"></div>
               </div>
               <div className="mt-8 md:mt-auto">
-                <Parallax offset={90}>
+                <Parallax offset={180}>
                   <h3 className="text-[5rem] sm:text-[6rem] md:text-[10rem] lg:text-[14rem] font-bold text-[#f13b22] font-chakra tracking-tighter leading-none mb-4 sm:mb-8">12%</h3>
                 </Parallax>
                 <div className="flex items-center gap-4 sm:gap-6 mb-4 sm:mb-8">
@@ -134,7 +148,7 @@ export default function Page() {
             
             <div className="p-8 md:p-16 lg:p-24 flex flex-col justify-end">
               <div className="mt-8 md:mt-0">
-                <Parallax offset={70}>
+                <Parallax offset={120}>
                   <h3 className="text-[5rem] sm:text-[6rem] md:text-[10rem] lg:text-[14rem] font-bold text-[#f13b22] font-chakra tracking-tighter leading-none mb-4 sm:mb-8">8.4</h3>
                 </Parallax>
                 <div className="flex items-center gap-4 sm:gap-6 mb-4 sm:mb-8">
@@ -158,7 +172,7 @@ export default function Page() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 sm:gap-16 md:gap-12 flex-1">
             <div className="flex flex-col justify-between">
-              <Parallax offset={60}>
+              <Parallax offset={120}>
                 <h2 className="text-4xl sm:text-5xl md:text-7xl lg:text-[6rem] xl:text-[7.5rem] font-space font-medium leading-[0.85] tracking-[-0.03em] text-[#1c1c1c]">
                   Join Us in <br />
                   Building <br />
@@ -168,7 +182,7 @@ export default function Page() {
                 </h2>
               </Parallax>
               <div className="flex items-end gap-6 sm:gap-8 mt-12 sm:mt-16 md:mt-auto">
-                <Parallax offset={100}>
+                <Parallax offset={200}>
                   <h3 className="text-[5rem] sm:text-[6rem] md:text-[10rem] lg:text-[14rem] font-bold text-[#f13b22] font-chakra tracking-tighter leading-none">04</h3>
                 </Parallax>
                 <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-full border border-[#1c1c1c]/20 flex items-center justify-center text-[#f13b22] mb-2 sm:mb-4 shrink-0">
@@ -198,7 +212,7 @@ export default function Page() {
                 <div className="w-2.5 h-2.5 rounded-full bg-[#1c1c1c]/40"></div>
               </div>
               
-              <Parallax offset={80} className="mt-8 sm:mt-12 md:mt-4">
+              <Parallax offset={150} className="mt-8 sm:mt-12 md:mt-4">
                 <h3 className="text-[5rem] sm:text-[6rem] md:text-[10rem] lg:text-[14rem] font-bold font-chakra tracking-tighter leading-none text-[#1c1c1c]">2026</h3>
               </Parallax>
             </div>
@@ -212,7 +226,7 @@ export default function Page() {
           </div>
 
           <div className="flex-1 flex flex-col justify-center">
-            <Parallax offset={70}>
+            <Parallax offset={120}>
               <h2 className="text-4xl sm:text-5xl md:text-7xl lg:text-[6rem] xl:text-[7.5rem] font-space font-medium leading-[0.85] tracking-[-0.03em] text-[#1c1c1c] max-w-full md:max-w-[90%]">
                 Unlike traditional tools,<br />
                 <span className="text-[#f13b22]">our solution</span> is built for<br />
@@ -246,7 +260,7 @@ export default function Page() {
           </div>
 
           <div className="flex flex-col mb-12 sm:mb-16 md:mb-24">
-            <Parallax offset={50}>
+            <Parallax offset={100}>
               <h2 className="text-4xl sm:text-5xl md:text-7xl lg:text-[6rem] font-space font-medium leading-[0.85] tracking-[-0.03em] text-[#1c1c1c]">
                 Trusted by <br />
                 <span className="text-[#f13b22]">Industry Leaders.</span>
